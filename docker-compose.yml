@@ -19,10 +19,6 @@ services:
     #   context: .
     #   dockerfile: "./docker/Dockerfile.custom"
     restart: unless-stopped
-    environment:
-      FREQTRADE__TELEGRAM__ENABLED: "true"
-      FREQTRADE__TELEGRAM__TOKEN: ${TELEGRAM_BOT_TOKEN}
-      FREQTRADE__TELEGRAM__CHAT_ID: ${TELEGRAM_CHAT_ID}
     container_name: freqtrade
     volumes:
       - "./user_data:/freqtrade/user_data"
